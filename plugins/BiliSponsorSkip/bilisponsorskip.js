@@ -54,7 +54,7 @@ controlButton.addEventListener("click", function () {
                     }
                 }
 
-                if(!foundSegment) {
+                if (!foundSegment) {
                     window.showToast("未到恰饭片段（恰饭片段前10秒可跳转）");
                 }
             }
