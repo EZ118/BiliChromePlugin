@@ -2,7 +2,7 @@
 // @name BiliSponsorSkip
 // @author EZ118
 // @license MIT 
-// @version 0.1
+// @version 0.2
 // ==/UserScript==
 
 // 以上内容不属于JS插件的规范，BiliScape不会读取，仅向代码阅读者注明插件信息
@@ -19,8 +19,8 @@ var controlButton = document.getElementById("player_jumpSponsorClip");
 var videoContainer = document.getElementById('player_videoContainer');
 
 controlButton.addEventListener("click", function () {
-    var bvid = window.bvidPlayingNow;
-    var cid = window.cidPlayingNow;
+    var bvid = player.bvid;
+    var cid = player.cid;
 
     $.ajax({
         url: "https://bsbsb.top/api/skipSegments?videoID=" + bvid + "&cid=" + cid + "&actionType=skip",
