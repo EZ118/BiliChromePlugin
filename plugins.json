@@ -15,6 +15,13 @@
             "description": "为视频播放器提供触摸手势操作的支持",
             "version": "0.1",
             "url": "./plugins/VideoGesture/videogesture.js"
+        },
+        {
+            "name": "GamepadControl",
+            "author": "EZ118",
+            "description": "支持用游戏手柄操作界面",
+            "version": "0.1",
+            "url": "./plugins/GamepadControl/gamepadcontrol.js"
         }
     ]
 }

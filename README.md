@@ -4,6 +4,7 @@
 ## 脚本列表
 - [一键跳过恰饭片段](./plugins/BiliSponsorSkip/)
 - [播放器触摸屏手势](./plugins/VideoGesture/)
+- [手柄控制支持](./plugins/GamepadControl/)
 
 ## JS插件导入教程
 1. 从该仓库中下载js文件，保存到本地
@@ -22,4 +23,3 @@
    
 ## 开发计划
 - 修改默认启动页面插件
-- 支持手柄操作的插件
