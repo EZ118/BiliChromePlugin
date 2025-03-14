@@ -2,7 +2,7 @@
 // @name BiliSponsorSkip
 // @author EZ118
 // @license MIT 
-// @version 0.2
+// @version 0.3
 // ==/UserScript==
 
 // 以上内容不属于JS插件的规范，BiliScape不会读取，仅向代码阅读者注明插件信息
@@ -18,6 +18,15 @@ document.getElementById("player_scrSwitchBtn").parentElement.append(jumpBtn);
 var controlButton = document.getElementById("player_jumpSponsorClip");
 var videoContainer = document.getElementById('player_videoContainer');
 
+function doToast(message) {
+    // 判断是否BiliScape 3.3.0还是3.3.1版本，两者的toast方法不同
+    if (modal) {
+        modal.toast(message);
+    } else {
+        showToast(message);
+    }
+}
+
 controlButton.addEventListener("click", function () {
     var bvid = player.bvid;
     var cid = player.cid;
@@ -27,7 +36,7 @@ controlButton.addEventListener("click", function () {
         method: 'GET',
         success: function (result) {
             if (!Array.isArray(result) || result.length === 0) {
-                window.showToast("数据返回错误");
+                doToast("数据返回错误");
                 return;
             }
 
@@ -50,17 +59,17 @@ controlButton.addEventListener("click", function () {
                         // 当前时间在当前段落内
                         videoContainer.currentTime = segmentEnd;
                         foundSegment = true;
-                        window.showToast("已跳转");
+                        doToast("已跳转");
                     }
                 }
 
                 if (!foundSegment) {
-                    window.showToast("未到恰饭片段（恰饭片段前10秒可跳转）");
+                    doToast("未到恰饭片段（恰饭片段前10秒可跳转）");
                 }
             }
         },
         error: function (jqXHR, textStatus, errorThrown) {
-            window.showToast("没有恰饭片段的数据");
+            doToast("没有恰饭片段的数据");
         }
     });
 });
