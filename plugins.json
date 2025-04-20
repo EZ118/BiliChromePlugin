@@ -6,7 +6,7 @@
             "name": "BiliSponsorSkip",
             "author": "EZ118",
             "description": "一键跳过视频的赞助商广告",
-            "version": "0.2",
+            "version": "0.3",
             "url": "./plugins/BiliSponsorSkip/bilisponsorskip.js"
         },
         {
@@ -15,6 +15,13 @@
             "description": "为视频播放器提供触摸手势操作的支持",
             "version": "0.1",
             "url": "./plugins/VideoGesture/videogesture.js"
+        },
+        {
+            "name": "CoolAnimation",
+            "author": "EZ118",
+            "description": "为BiliScape添加额外的动画效果",
+            "version": "0.1",
+            "url": "./plugins/CoolAnimation/coolanimation.js"
         },
         {
             "name": "GamepadControl",

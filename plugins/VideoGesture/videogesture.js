@@ -5,8 +5,6 @@
 // @version 0.1
 // ==/UserScript==
 
-// 以上内容不属于JS插件的规范，BiliScape不会读取，仅向代码阅读者注明插件信息
-
 var video = document.getElementById('player_videoContainer');
 var touchStartX = 0;
 var touchStartY = 0;

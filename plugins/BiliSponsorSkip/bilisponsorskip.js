@@ -5,8 +5,6 @@
 // @version 0.3
 // ==/UserScript==
 
-// 以上内容不属于JS插件的规范，BiliScape不会读取，仅向代码阅读者注明插件信息
-
 // 创建元素
 var jumpBtn = document.createElement('s-icon-button');
 jumpBtn.id = 'player_jumpSponsorClip';
